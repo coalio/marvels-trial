@@ -15,7 +15,7 @@ const HomeMenuPanel = () => {
                     <span className="innerFill">Let's go</span>
                 </Link>
                 <a
-                    href="https://github.com/coals-attic/marvels-trial"
+                    href="https://github.com/coalio/marvels-trial"
                     className="cornered-button cornered-button-light cornered-button-outline"
                 >
                     <span className="innerFill">Source code</span>
