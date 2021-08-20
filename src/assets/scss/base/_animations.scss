@@ -1,0 +1,115 @@
+// Iterates over a range which places the background in a
+// different position, hence creating a comic loop over a single image.
+@keyframes comics-background {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 2000% 2000%;
+    }
+    100% {
+        background-position: -2000% -2000%;
+    }
+}
+
+%animation-comics-background {
+    animation: comics-background 6s steps(30) infinite;
+}
+
+// Ohhh shiny, I love this.
+@keyframes shiny {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+%animation-shiny-infinite {
+    background-image: linear-gradient(
+        135deg,
+        $dark-transparent 0%,
+        rgba(131, 131, 131, 0.397) 37.5%,
+        $dark-transparent 75%,
+        $dark-transparent 100%
+    );
+
+    background-size: 400%;
+    animation-name: shiny;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+// Simple spin
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+%animation-spin {
+    animation: spin 1s steps(30) infinite;
+}
+
+// Text sliding up infinitely
+@keyframes text-sliding-up {
+    0% {
+        transform: translateY(400px);
+    }
+    100% {
+        transform: translateY(-400px);
+    }
+}
+
+%animation-text-sliding-up {
+    animation: text-sliding-up 30s steps(1800) infinite;
+}
+
+// Slide in
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+%animation-slide-in {
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+}
+
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.06;
+    }
+}
+
+%animation-fade-forwards {
+    animation: fade 6s steps(30) forwards;
+}
+
+%animation-fade-reverse {
+    animation: fade 6s steps(30) reverse;
+}

@@ -1,0 +1,38 @@
+.Browse-bar {
+    border-bottom: 1px solid $marvel-white;
+
+    &-icon {
+        color: $marvel-white;
+        font-size: 2rem;
+        padding-right: 0.5rem;
+        cursor: pointer;
+        transition: color 0.1s ease-in-out;
+
+        &:hover {
+            color: $marvel-red;
+        }
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+
+    &-input {
+        background-color: transparent;
+        font-family: $marvel-font;
+        font-size: 2rem;
+        color: $marvel-white;
+        outline: none;
+        border-style: none;
+        flex: 1;
+        max-width: 100%;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+
+        &::placeholder {
+            color: $marvel-white;
+        }
+    }
+}

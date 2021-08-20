@@ -1,0 +1,18 @@
+.Browse-results {
+    color: $marvel-white;
+    font-family: $marvel-font;
+
+    &-list {
+        // A flexible list of items
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.5rem;
+
+        // Add space between rows of items
+        &-item {
+            margin-bottom: 2rem;
+        }
+    }
+}

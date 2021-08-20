@@ -1,0 +1,28 @@
+.Favorite {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: $dark-transparent;
+    width: 45px;
+    height: 45px;
+
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    z-index: 2;
+
+    &-icon {
+        cursor: pointer;
+
+        &:hover {
+            color: $marvel-yellow;
+        }
+
+        &.is-favorite {
+            color: $marvel-yellow;
+        }
+    }
+}

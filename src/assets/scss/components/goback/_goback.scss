@@ -1,0 +1,33 @@
+.GoBack {
+    transition: all 0.1s ease-in-out;
+    font-family: $marvel-font;
+    margin: 5px;
+    font-size: 1.25rem;
+    width: fit-content;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+        color: $marvel-white;
+        // text-decoration only remains when focused, it is
+        // required for accessibility
+        text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+        transform: translateX(-10px);
+    }
+
+    &:focus {
+        outline: none;
+        text-decoration: underline;
+        transform: translateX(-10px);
+    }
+
+    &-icon {
+        margin: 5px;
+    }
+}

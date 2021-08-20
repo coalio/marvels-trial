@@ -1,0 +1,34 @@
+.Browse-searchTypes {
+    font-family: $marvel-font;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    &-type {
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1.25rem;
+        color: $marvel-white;
+        text-transform: uppercase;
+        transition: color 0.1s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+            color: $marvel-white;
+            text-decoration-color: $marvel-white;
+            text-decoration: none;
+        }
+
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            color: $marvel-red;
+        }
+    }
+}

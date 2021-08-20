@@ -1,0 +1,57 @@
+.Browse-filters {
+    position: relative;
+    overflow: hidden;
+
+    &-filter {
+        background: transparent;
+        border: none;
+        color: $marvel-white;
+        font-size: 1.25rem;
+        outline: none;
+        transition: color 0.1s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            color: $marvel-red;
+        }
+    }
+
+    &-open {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+
+        &:checked ~ .Browse-filters-list {
+            transform: translateX(5%);
+            opacity: 1;
+        }
+    }
+
+    &-list {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        font-family: $marvel-font;
+        font-size: 1rem;
+        justify-content: space-between;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translateX(-100%);
+        transition: all 0.5s ease-in-out;
+        width: 90%;
+        opacity: 0;
+        background-color: $dark-transparent;
+
+        &-item {
+            text-transform: uppercase;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}

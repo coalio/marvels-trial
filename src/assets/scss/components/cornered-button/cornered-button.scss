@@ -1,0 +1,560 @@
+.cornered-button {
+    .innerFill {
+        font: $btn-inner-font;
+        text-transform: uppercase;
+        display: block;
+        padding: 0 35px;
+        text-align: center;
+
+        &:before {
+            left: 0;
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+            right: 0;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            border-color: transparent;
+            border-style: solid;
+            border-width: 0 0 16px 16px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            content: "";
+            display: block;
+            position: absolute;
+        }
+
+        &:before {
+            border-color: transparent;
+            border-style: solid;
+            border-width: 0 0 16px 16px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            content: "";
+            display: block;
+            position: absolute;
+        }
+
+        &.hasLogo {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            .btn-img-wrapper {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                position: relative;
+                max-height: 36px;
+                -webkit-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                order: 2;
+                margin-left: 10px;
+
+                .img__wrapper {
+                    position: absolute;
+                    height: 36px;
+                    top: -18px;
+                }
+            }
+        }
+    }
+
+    -webkit-box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin: 15px auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: auto;
+    z-index: 10;
+
+    &:after {
+        border-style: solid;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        content: "";
+        display: block;
+        height: 16px;
+    }
+
+    &:before {
+        border-style: solid;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        content: "";
+        display: block;
+        height: 16px;
+        border-width: 0 0 16px 16px;
+        margin-left: 16px;
+        top: 0;
+    }
+
+    &:after {
+        border-width: 16px 16px 0 0;
+        bottom: 0;
+        margin-right: 16px;
+    }
+
+    &:focus {
+        outline: 2px solid $marvel-salmon;
+    }
+
+    &.cornered-button-outline {
+        &.cornered-button-red {
+            &:after {
+                border-color: $marvel-red;
+                -webkit-transition: none;
+                transition: none;
+                max-width: calc(100% - 15px);
+            }
+
+            &:before {
+                border-color: $marvel-red;
+                -webkit-transition: none;
+                transition: none;
+                max-width: calc(100% - 15px);
+                border-width: 1px 1px 0 0;
+                right: 0;
+            }
+
+            &:after {
+                border-width: 0 0 1px 1px;
+                left: 0;
+            }
+
+            .innerFill {
+                background-color: transparent;
+                border-left: 1px solid $marvel-red;
+                border-right: 1px solid $marvel-red;
+                color: $marvel-red;
+                opacity: 1;
+                -webkit-transition: none;
+                transition: none;
+                text-align: center;
+                line-height: 16px;
+
+                &:after,
+                &:before {
+                    background-size: 16px 24px;
+                    background-image: repeating-linear-gradient(
+                        -45deg,
+                        $marvel-red,
+                        $marvel-red 1px,
+                        transparent 0,
+                        transparent 16px
+                    );
+                    -webkit-transition: none;
+                    transition: none;
+                }
+
+                a {
+                    display: block;
+                }
+            }
+
+            &:hover {
+                &:after,
+                &:before {
+                    opacity: 0.4;
+                    -webkit-transform: translate3d(0);
+                    transform: translate3d(0);
+                }
+
+                .innerFill {
+                    border-color: rgba(235, 35, 40, 0.4);
+
+                    &:after,
+                    &:before {
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+
+        &.cornered-button-light {
+            &:after {
+                border-color: $white;
+                -webkit-transition: none;
+                transition: none;
+                max-width: calc(100% - 15px);
+            }
+
+            &:before {
+                border-color: $white;
+                -webkit-transition: none;
+                transition: none;
+                max-width: calc(100% - 15px);
+                border-width: 1px 1px 0 0;
+                right: 0;
+            }
+
+            &:after {
+                border-width: 0 0 1px 1px;
+                left: 0;
+            }
+
+            .innerFill {
+                background-color: transparent;
+                border-left: 1px solid $white;
+                border-right: 1px solid $white;
+                color: $white;
+                opacity: 1;
+                -webkit-transition: none;
+                transition: none;
+                text-align: center;
+                line-height: 16px;
+
+                &:after,
+                &:before {
+                    background-size: 16px 24px;
+                    background-image: repeating-linear-gradient(
+                        -45deg,
+                        $white,
+                        $white 1px,
+                        transparent 0,
+                        transparent 16px
+                    );
+                    -webkit-transition: none;
+                    transition: none;
+                }
+
+                a {
+                    display: block;
+                }
+            }
+
+            &:hover {
+                &:after,
+                &:before {
+                    opacity: 0.4;
+                    -webkit-transform: translate3d(0);
+                    transform: translate3d(0);
+                }
+
+                .innerFill {
+                    border-color: hsla(0, 0%, 100%, 0.4);
+
+                    &:after,
+                    &:before {
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+
+        &.cornered-button-dark {
+            &:after {
+                border-color: $marvel-dark;
+                -webkit-transition: none;
+                transition: none;
+                max-width: calc(100% - 15px);
+            }
+
+            &:before {
+                border-color: $marvel-dark;
+                -webkit-transition: none;
+                transition: none;
+                max-width: calc(100% - 15px);
+                border-width: 1px 1px 0 0;
+                right: 0;
+            }
+
+            &:after {
+                border-width: 0 0 1px 1px;
+                left: 0;
+            }
+
+            .innerFill {
+                background-color: transparent;
+                border-left: 1px solid $marvel-dark;
+                border-right: 1px solid $marvel-dark;
+                color: $marvel-dark;
+                opacity: 1;
+                -webkit-transition: none;
+                transition: none;
+                text-align: center;
+                line-height: 16px;
+
+                &:after,
+                &:before {
+                    background-size: 16px 24px;
+                    background-image: repeating-linear-gradient(
+                        -45deg,
+                        $marvel-dark,
+                        $marvel-dark 1px,
+                        transparent 0,
+                        transparent 16px
+                    );
+                    -webkit-transition: none;
+                    transition: none;
+                }
+
+                a {
+                    display: block;
+                }
+            }
+
+            &:hover {
+                &:after,
+                &:before {
+                    opacity: 0.4;
+                    -webkit-transform: translate3d(0);
+                    transform: translate3d(0);
+                }
+
+                .innerFill {
+                    border-color: $marvel-dark-transparent;
+
+                    &:after,
+                    &:before {
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+    }
+
+    &.cornered-button-solid {
+        &.cornered-button-red {
+            &:after {
+                background-color: $marvel-red;
+                border-color: $marvel-red;
+                -webkit-transition: none;
+                transition: none;
+            }
+
+            &:before {
+                background-color: $marvel-red;
+                border-color: $marvel-red;
+                -webkit-transition: none;
+                transition: none;
+                margin-left: 16px;
+            }
+
+            &:after {
+                margin-right: 16px;
+            }
+
+            .innerFill {
+                color: $white;
+                background-color: $marvel-red;
+                -webkit-transition: none;
+                transition: none;
+                text-align: center;
+
+                &:after,
+                &:before {
+                    border-color: $marvel-red transparent;
+                    -webkit-transition: none;
+                    transition: none;
+                }
+
+                img {
+                    max-height: 36px;
+                    width: auto;
+                    text-align: center;
+                    margin: 0 auto !important;
+                }
+            }
+
+            &:hover {
+                &:after,
+                &:before {
+                    background-color: $marvel-dark-red;
+                    border-color: $marvel-dark-red;
+                    opacity: 1;
+                }
+
+                .innerFill {
+                    background-color: $marvel-dark-red;
+                    border-color: $marvel-dark-red;
+                    color: $white;
+
+                    &:after,
+                    &:before {
+                        border-color: $marvel-dark-red transparent;
+                        opacity: 1;
+                    }
+                }
+
+                div {
+                    background-color: transparent;
+
+                    &:after,
+                    &:before {
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+
+        &.cornered-button-blue {
+            &:after {
+                background-color: $marvel-blue;
+                border-color: $marvel-blue;
+                -webkit-transition: none;
+                transition: none;
+            }
+
+            &:before {
+                background-color: $marvel-blue;
+                border-color: $marvel-blue;
+                -webkit-transition: none;
+                transition: none;
+                margin-left: 16px;
+            }
+
+            &:after {
+                margin-right: 16px;
+            }
+
+            .innerFill {
+                color: $white;
+                background-color: $marvel-blue;
+                -webkit-transition: none;
+                transition: none;
+                text-align: center;
+
+                &:after,
+                &:before {
+                    border-color: $marvel-blue transparent;
+                    -webkit-transition: none;
+                    transition: none;
+                }
+
+                img {
+                    max-height: 36px;
+                    width: auto;
+                    text-align: center;
+                    margin: 0 auto !important;
+                }
+            }
+
+            &:hover {
+                &:after,
+                &:before {
+                    background-color: $marvel-sky-blue;
+                    border-color: $marvel-sky-blue;
+                    opacity: 1;
+                }
+
+                .innerFill {
+                    background-color: $marvel-sky-blue;
+                    border-color: $marvel-sky-blue;
+                    color: $white;
+
+                    &:after,
+                    &:before {
+                        border-color: $marvel-sky-blue transparent;
+                        opacity: 1;
+                    }
+                }
+
+                div {
+                    background-color: transparent;
+
+                    &:after,
+                    &:before {
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+
+        &.cornered-button-light {
+            &:after {
+                background-color: $white;
+                border-color: $white;
+                -webkit-transition: none;
+                transition: none;
+            }
+
+            &:before {
+                background-color: $white;
+                border-color: $white;
+                -webkit-transition: none;
+                transition: none;
+                margin-left: 16px;
+            }
+
+            &:after {
+                margin-right: 16px;
+            }
+
+            .innerFill {
+                color: $marvel-dark;
+                background-color: $white;
+                -webkit-transition: none;
+                transition: none;
+                text-align: center;
+
+                &:after,
+                &:before {
+                    border-color: $white transparent;
+                    -webkit-transition: none;
+                    transition: none;
+                }
+
+                img {
+                    max-height: 36px;
+                    width: auto;
+                    text-align: center;
+                    margin: 0 auto !important;
+                }
+            }
+
+            &:hover {
+                &:after,
+                &:before {
+                    background-color: $marvel-toneless-gray;
+                    border-color: $marvel-toneless-gray;
+                    opacity: 1;
+                }
+
+                .innerFill {
+                    background-color: $marvel-toneless-gray;
+                    border-color: $marvel-toneless-gray;
+                    color: $marvel-dark;
+
+                    &:after,
+                    &:before {
+                        border-color: $marvel-toneless-gray transparent;
+                        opacity: 1;
+                    }
+                }
+
+                div {
+                    background-color: transparent;
+
+                    &:after,
+                    &:before {
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
